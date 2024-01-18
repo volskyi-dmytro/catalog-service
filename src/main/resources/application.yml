@@ -6,3 +6,5 @@ server:
     threads:
       max: 50
       min-spare: 5
+uabookshop:
+  greeting: Welcome to the updated book catalog
