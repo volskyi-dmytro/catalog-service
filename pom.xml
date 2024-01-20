@@ -60,6 +60,10 @@
 							<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
 						</env>
 					</image>
+					<systemPropertyVariables>
+						<spring.profiles.active>testdata</spring.profiles.active>
+					</systemPropertyVariables>
+
 				</configuration>
 				<executions>
 					<execution>
