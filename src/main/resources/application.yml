@@ -8,3 +8,12 @@ server:
       min-spare: 5
 uabookshop:
   greeting: Welcome to the updated book catalog
+
+spring:
+  application:
+    name: catalog-service
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
