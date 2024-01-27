@@ -20,7 +20,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Import the Spring Cloud BOM to manage Spring Cloud dependencies -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -76,7 +75,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<!-- Make sure `mvn spring-boot:build-image` uses the Java version defined in this project -->
 					<image>
 						<env>
 							<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
