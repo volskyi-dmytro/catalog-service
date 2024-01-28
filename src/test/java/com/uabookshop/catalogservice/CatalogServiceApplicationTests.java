@@ -16,11 +16,7 @@ class CatalogServiceApplicationTests {
 	@Autowired
 	private WebTestClient webTestClient;
 
-    CatalogServiceApplicationTests(WebTestClient webTestClient) {
-        this.webTestClient = webTestClient;
-    }
-
-    @Test
+	@Test
 	void whenPostRequestThenBookCreated() {
 		var expectedBook = new Book(
 				"1231231231", "Title", "Author", 9.90);
