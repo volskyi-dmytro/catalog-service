@@ -8,6 +8,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Component
 @Profile("testdata")
@@ -20,6 +21,7 @@ public class BookDataLoader {
 
     @EventListener(ApplicationReadyEvent.class)
     public void loadBookTestData() {
+        bookRepository.deleteAll();
 
         var book1 = Book.of("1234567801", "Death and the Penguin", "Andrey Kurkov", 15.90);
         var book2 = Book.of("1234567802", "Field Work in Ukrainian Sex", "Oksana Zabuzhko", 13.90);
@@ -32,8 +34,8 @@ public class BookDataLoader {
         var book9 = Book.of("1234567809", "The House with the Stained-Glass Window", "Żanna Słoniowska", 11.90);
         var book10 = Book.of("1234567810", "Voroshilovgrad", "Serhiy Zhadan", 18.90);
 
-        Arrays.asList(book1, book2, book3, book4, book5,
-                book6, book7, book8, book9, book10).forEach(bookRepository::save);
+        bookRepository.saveAll(List.of(book1, book2, book3, book4, book5,
+                book6, book7, book8, book9, book10));
 
     }
 }
