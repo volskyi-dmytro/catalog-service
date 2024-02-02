@@ -42,7 +42,7 @@ public class BookJsonTests {
                 "title" : "Title",
                 "author" : "Author",
                 "price" : 1.20,
-                "publisher" : "The Old Lion
+                "publisher" : "The Old Lion"
                 }
                 """;
 
