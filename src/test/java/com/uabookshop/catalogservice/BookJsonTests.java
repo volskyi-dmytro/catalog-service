@@ -19,7 +19,7 @@ public class BookJsonTests {
 
     void testSerialize() throws Exception {
         var book = Book.of(
-                "1234567890", "Title", "Author", 3.20);
+                "1234567890", "Title", "Author", 3.20, "Publisher");
 
         var jsonContent = json.write(book);
 
@@ -41,7 +41,8 @@ public class BookJsonTests {
                 "isbn" : "1234567890",
                 "title" : "Title",
                 "author" : "Author",
-                "price" : 1.20
+                "price" : 1.20,
+                "publisher" : "The Old Lion
                 }
                 """;
 
@@ -52,6 +53,7 @@ public class BookJsonTests {
                                 "1234567890"
                                 , "Title"
                                 , "Author"
-                                , 1.20));
+                                , 1.20
+                        ,"The Old Lion"));
     }
 }
