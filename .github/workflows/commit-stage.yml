@@ -58,6 +58,8 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: maven
+      - name: Grant execute permissions for mvnw
+        run: chmod +x ./mvnw
       - name: Build container image and push
         run: |
           ./mvnw spring-boot:build-image \
