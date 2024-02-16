@@ -121,7 +121,9 @@
 					<systemPropertyVariables>
 						<spring.profiles.active>testdata</spring.profiles.active>
 					</systemPropertyVariables>
-
+					<environmentVariables>
+                                 <TESTCONTAINERS_RYUK_DISABLED>true</TESTCONTAINERS_RYUK_DISABLED>
+                             </environmentVariables>
 				</configuration>
 				<executions>
 					<execution>
