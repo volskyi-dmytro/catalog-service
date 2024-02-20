@@ -15,7 +15,7 @@
 	<description>Manages the books in the catalog</description>
 	<properties>
 		<java.version>17</java.version>
-		<testcontainersVersion>1.19.4</testcontainersVersion>
+		<testcontainersVersion>1.19.5</testcontainersVersion>
 	</properties>
 
 	<dependencyManagement>
