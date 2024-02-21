@@ -44,7 +44,7 @@ jobs:
         uses: alexellis/arkade-get@master
         with:
           kubectl: latest
-          kubeval: 0.16.1
+          kubeval: latest
           command: |
             kubeval --strict -d k8s
   package:
